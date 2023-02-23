@@ -1,3 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components{
+    .Header-Button-Active{
+        @apply py-[5px] px-[14px] bg-orange-500 text-[#eee] rounded-[5px] text-[18px] mr-[10px] cursor-pointer hover:scale-105 
+        transition-all duration-75 ease-in animate-slidedown
+     }
+    .Header-Button-Sleep{
+        @apply py-[5px] px-[14px] hover:bg-orange-500 hover:text-[#eee] text-[#8d8d8d] rounded-[5px] text-[18px] mr-[10px] cursor-pointer hover:scale-110 
+        transition-all duration-150 ease-in animate-slidedown
+     }
+     .Header-icon{
+        @apply p-[10px] shadow-lg
+           rounded-full hover:scale-110 hover:bg-orange-400 mr-[2px]  2lg:mr-[10px] cursor-pointer transition-all duration-75 ease-in
+     }
+     .flex-row-between{
+        @apply flex flex-row items-center justify-between
+     }
+     .Ads{
+      @apply flex flex-row items-center px-[20px] cursor-pointer py-[8px] bg-slate-200 rounded mr-[15px] mb-[15px] hover:scale-110 
+      transition-all duration-150 ease-in
+     }
+     .flexRowCenter{
+      @apply flex flex-row items-center
+     }
+     .flexColCenter{
+      @apply flex flex-col items-center
+     }
+     .trasition{
+      @apply transition-all duration-75
+     }
+     .ReviewSlide{
+      @apply w-[90%] h-[auto] select-none animate-slideright2 dark:bg-[black] 
+     }
+     .FooterController{
+      @apply  flex flex-col items-center 3lg:items-start justify-center  3lg:justify-start px-[10px]
+      
+     }
+     .Footerstyle{
+      @apply text-[20px]  text-gray-500 hover:underline hover:text-orange-500 cursor-pointer
+     }
+     .siderBarCretory{
+      @apply transition-all duration-150 ease-in w-[90%] h-[60px] bg-white shadow-lg flexRowCenter 
+      justify-center my-[10px] m-auto rounded-[5px] hover:scale-110 
+     } 
+     .AdminCreatory{
+      @apply w-[80%] mx-auto  h-[60px] cursor-pointer   flex flex-row items-center  justify-between  
+     }
+     .AdminCreatoryContainer{
+      @apply w-full h-[60px] select-none rounded flex flex-row items-center justify-center hover:scale-105 trasition hover:text-[#191F45] hover:bg-[#ffda85]
+     }
+     .AdminCreatoryContainerActive{
+      @apply  w-full h-[60px] select-none rounded flex flex-row items-center justify-center hover:scale-105 trasition 
+        text-[#191F45] bg-[#ffda85]
+     }
+     .ProductHeader{
+      @apply w-[200px] h-[80px]   flexRowCenter justify-center text-orange-500 text-center font-bold text-[14px] 775:text-[18px] 
+     }
+     .ProductBody{
+      @apply w-[200px] h-auto   flexColCenter justify-center
+     }
+     .ProductRowBody{
+      @apply text-[14px] 775:text-[18px] font-bold flex flex-row  items-start justify-between w-full h-[auto] overflow-hidden
+     }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+#root{    
+    font-family: 'Nunito', sans-serif;    
+}
+
+#linerColour{
+	background: linear-gradient(81.84deg, #0099ff -9.4%, #a033ff 51.57%, #ff5280 84.07%, #ff7061 90.59%);
+  /*  -webkit-background-clip: text;
+    color: transparent;
+    */
+}
+#linerColour2{
+	background: linear-gradient(81.84deg, #9a27ff -9.4%, #ff5280 51.57% ,  #ff7061 90.59%);
+  /*  -webkit-background-clip: text;
+    color: transparent;
+    */
+}
+#linerColour3{
+	background: linear-gradient(81.84deg, #f5f5f5 -9.4%, #0099ff 51.57% ,  #0099ff 90.59%);
+  /*  -webkit-background-clip: text;
+    color: transparent;
+    */
+}
+#linerColourH3:hover{
+	background: linear-gradient(81.84deg, #f5f5f5 -9.4%, #0099ff 51.57% ,  #0099ff 90.59%);
+  /*  -webkit-background-clip: text;
+    color: transparent;
+    */
+}
+#linerColour4{
+	background: linear-gradient(81.84deg, #f5f5f5 -9.4%, #FF781f 51.57% ,  #FF781f 90.59%);
+  /*  -webkit-background-clip: text;
+    color: transparent;
+    */
+}
+#linerColourtext{
+	background: linear-gradient(81.84deg, #0099ff -9.4%, #a033ff 51.57%, #ff5280 84.07%, #ff7061 90.59%);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+
+
+
+.swiper {
+    width: 100%;
+    height: 100%;   
+  }
+  
+  .swiper-slide {
+    
+    text-align: center;
+    font-size: 18px;
+    background:  transparent;  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #cursive{
+    font-family: 'Square Peg', cursive;
+  }
+  #monospace{
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+  }
+
+
+  #root::-webkit-scrollbar {
+    cursor: pointer;
+    width: 10px;    
+    }
+    #root::-webkit-scrollbar-track {          
+    background: #18191A;
+     }
+     #root::-webkit-scrollbar-track:hover { 
+       
+    background: rgba(128, 128, 128, 0.253);
+     }
+     #root::-webkit-scrollbar-thumb {
+     background: rgba(220, 220, 220, 0.345);      
+     border-radius: 8px;
+    
+    }
+  #customscroll::-webkit-scrollbar {
+    cursor: pointer;
+    width: 10px;    
+    }
+    #customscroll::-webkit-scrollbar-track {          
+    background: #18191A;
+     }
+     #customscroll::-webkit-scrollbar-track:hover { 
+       
+    background: rgba(128, 128, 128, 0.253);
+     }
+     #customscroll::-webkit-scrollbar-thumb {
+     background: rgba(220, 220, 220, 0.345);      
+     border-radius: 8px;
+    
+    }
+
+    #scrollnone {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  #scrollnone::-webkit-scrollbar {
+    display: none; 
+    width: 0; 
+    }
+    #scrollnone::-webkit-scrollbar-track {          
+    background: #18191a00;
+     }
+     #scrollnone::-webkit-scrollbar-track:hover { 
+       
+    background: rgba(128, 128, 128, 0.253);
+     }
+     #scrollnone::-webkit-scrollbar-thumb {
+     background: rgba(220, 220, 220, 0.345);      
+     border-radius: 8px;
+    
+    }
