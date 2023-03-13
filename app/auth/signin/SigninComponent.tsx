@@ -8,13 +8,13 @@ type Props = {
 }
 function SigninComponent({providers}: Props) {
  
-    const SinglePRovider = Object?.values(providers!).map((provider) => { return provider  })
-  
+ 
+  console.log(providers,"🍕🍕")
 
   return (
     <div className='w-full h-screen flexColCenter items-center justify-center '>
       
-        <div  key={SinglePRovider[0].name} onClick={() => signIn(SinglePRovider[0].id,{
+        <div  key={providers?.google.name} onClick={() => signIn(providers?.google.id,{
           callbackUrl: "https://fastfoodbackend.onrender.com"
         })} className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition justify-around py-[13px] cursor-pointer   font-bold  text-[black]  bg-white rounded-[5px] mb-[10px]'>
           <img
@@ -22,10 +22,10 @@ function SigninComponent({providers}: Props) {
            className='w-[35px]'
           />
           <span className='w-[85%] ml-[15px] text-start' >
-            Sign in with {SinglePRovider[0].name}
+            Sign in with {providers?.google.name}
           </span>
         </div>
-        <div key={SinglePRovider[3].name} onClick={() => signIn(SinglePRovider[3].id,{
+        <div key={providers?.github.name} onClick={() => signIn(providers?.github.id,{
           callbackUrl: "https://fastfoodbackend.onrender.com"
         })} className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white] bg-[#101010]   rounded-[5px] mb-[10px]'>
@@ -34,10 +34,10 @@ function SigninComponent({providers}: Props) {
            className='w-[37px] rounded-full'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
-            Sign in with {SinglePRovider[3].name}
+            Sign in with {providers?.github.name}
           </span>
         </div>
-        <div key={SinglePRovider[1].name} onClick={() => signIn(SinglePRovider[1].id,{
+        <div key={ providers?.facebook.name} onClick={() => signIn(providers?.facebook.id,{
           callbackUrl: "https://fastfoodbackend.onrender.com"
         })} id='linerColour3' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white]   rounded-[5px] mb-[10px]'>
@@ -46,7 +46,7 @@ function SigninComponent({providers}: Props) {
            className='w-[37px]'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
-            Sign in with {SinglePRovider[1].name}
+            Sign in with {providers?.facebook.name}
           </span>
         </div>
         <Link  href="/FastFoodAuth" id='linerColour4' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
@@ -59,7 +59,7 @@ function SigninComponent({providers}: Props) {
             Sign in with FastFood
           </span>
         </Link>
-        <div key={SinglePRovider[2].name} onClick={() => signIn(SinglePRovider[2].id,{
+        <div key={providers?.instagram.name} onClick={() => signIn(providers?.instagram.id,{
           callbackUrl: "https://fastfoodbackend.onrender.com"
         })} id='linerColour2' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white]   rounded-[5px] mb-[10px]'>
@@ -68,7 +68,7 @@ function SigninComponent({providers}: Props) {
            className='w-[37px]'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
-            Sign in with {SinglePRovider[2].name}
+            Sign in with {providers?.instagram.name}
           </span>
         </div>
    

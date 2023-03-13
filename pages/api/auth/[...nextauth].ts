@@ -23,10 +23,7 @@ export const authOptions ={
         clientId: process.env.GITHUB_ID as string,
         clientSecret: process.env.GITHUB_SECRET as string
       }),
-      SpotifyProvider({
-        clientId: process.env.SPOTIFY_CLIENT_ID as string,
-        clientSecret: process.env.SPOTIFY_CLIENT_SECRET as string
-      })
+      
     ],
     pages: {
       signIn: '/auth/signin',     
