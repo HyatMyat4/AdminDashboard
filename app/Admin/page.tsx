@@ -1,4 +1,4 @@
-"use client"
+
 import React from "react";
 import Adminleft from "./Adminleft";
 import RightHeader from "./RightHeader";
@@ -8,20 +8,10 @@ import { GET_Users } from "../../Graphql/Queries/Users";
 import DashboardHeader from "./DashboardHeader";
 import DashboardFirstRow from "./DashboardFirstRow";
 import DashBoardSecondRow from "./DashBoardSecondRow";
-import { useEffect , useState } from "react";
- function HomePage() {
-  const [data , setdata] = useState<any>()
-  const [userdata , setuserdata] = useState<any>()
-  useEffect(() => {
-    fetchdata()
-  }, [])
-  
- const fetchdata = async () => {
+async function HomePage() {
   const { data } = await GET_FoodProducts();
   const { data: userdata } = await GET_Users();
-  setdata(data)
-  setuserdata(userdata)
- }
+
  
  
 

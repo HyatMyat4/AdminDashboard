@@ -2,12 +2,15 @@
 import { getProviders , signIn } from 'next-auth/react'
 import React from 'react'
 import Link from 'next/link'
+import { useState } from'react'
 type Props = {
     providers: Awaited<ReturnType<typeof getProviders>>;
 }
 function SigninComponent({providers}: Props) {
+ 
+    const SinglePRovider = Object?.values(providers!).map((provider) => { return provider  })
+  
 
-  const SinglePRovider = Object.values(providers!).map((provider) => { return provider  })
   return (
     <div className='w-full h-screen flexColCenter items-center justify-center '>
       

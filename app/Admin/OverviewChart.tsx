@@ -12,10 +12,11 @@ import {
   yellow,
 } from "@mui/material/colors";
 import { ResponsiveLine } from "@nivo/line";
-
+import { useEffect , useState } from 'react'
 import { monthlyData } from "../../constants";
 import { useMemo } from "react";
 function OverviewChart({ isDashboard = false, view }: any) {
+  const [Windowwidth , setWindowwidth ] = useState<any>()
   const [totalSalesLine, totalUnitsLine] = useMemo(() => {
     if (!monthlyData) return [];
 
@@ -47,8 +48,15 @@ function OverviewChart({ isDashboard = false, view }: any) {
     return [[totalSalesLine], [totalUnitsLine]];
   }, [monthlyData]);
  
+  useEffect(() => {
+    if(window){
+      const Windowwidth = window.innerWidth || document.body.clientWidth
+    setWindowwidth(Windowwidth)
+    }
+  }, [])
   
-  const Windowwidth = window.innerWidth || document.body.clientWidth
+
+
   return (
     <div className="w-full h-full">
       {/* @ts-ignore */}
