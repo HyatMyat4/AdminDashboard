@@ -24,7 +24,7 @@ async function HomePage() {
           <DashboardFirstRow data={userdata} />
         </div>
         <div className="w-full h-[1000px] 6xl:h-[50%]">
-          <DashBoardSecondRow data={data?.FoodProducts} />
+          <DashBoardSecondRow data={data.FoodProducts} />
         </div>
       </div>
     </div>

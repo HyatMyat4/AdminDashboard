@@ -4006,10 +4006,10 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-easy-crop@^4.6.3:
-  version "4.6.3"
-  resolved "https://registry.npmjs.org/react-easy-crop/-/react-easy-crop-4.6.3.tgz"
-  integrity sha512-xeP5Cq56xDK2QkGs6RIrVXQs7cDan9B16yUt/3XqFN7siSjLgXkDfKNri8eC8CFSd3AFs0NX6IpIeIPBf4PCBA==
+react-easy-crop@^4.7.4:
+  version "4.7.4"
+  resolved "https://registry.yarnpkg.com/react-easy-crop/-/react-easy-crop-4.7.4.tgz#3106bfb3de371d9393aedc0b9ae1fb97c2b9f722"
+  integrity sha512-oDi1375Jo/zuPUvo3oauxnNbfy8L4wsbmHD1KB2vT55fdgu+q8/K0w/rDWzy9jz4jfQ94Q9+3Yu366sDDFVmiA==
   dependencies:
     normalize-wheel "^1.0.1"
     tslib "2.0.1"
