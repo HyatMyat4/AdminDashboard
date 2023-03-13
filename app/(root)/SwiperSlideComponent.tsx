@@ -16,7 +16,7 @@ const SwiperSlideComponent = ({data} : Props) => {
   return (
     <>
     <Toaster/>
-    <div className="w-full h-full flexColCenter 0lg:flexRowCenter justify-around dark:bg-[black] pt-[0px] 0lg:pt-[100px]  ">
+    <div key={data.FoodImage} className="w-full h-full flexColCenter 0lg:flexRowCenter justify-around dark:bg-[black] pt-[0px] 0lg:pt-[100px]  ">
             <div className="w-[350px] animate-slideright2 mt-[100px] inline 0lg:hidden">
             <Image
                 alt=''

@@ -43,7 +43,7 @@ function VerifyComponent({ setVerify }: any) {
   const handleLogin = async () => {
     if (!Email || !Password) return;
     try {
-      const login = await fetch("http://localhost:4000/auth/Verify", {
+      const login = await fetch("https://fastfoodbackend.onrender.com/auth/Verify", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email: Email, Password: Password }),

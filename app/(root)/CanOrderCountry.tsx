@@ -1,12 +1,13 @@
 type Props = {
   canOrderCountry: string;
   Countryname: string;
+  key : any
 };
 
-const CanOrderCountry = ({ canOrderCountry, Countryname }: Props) => {
+const CanOrderCountry = ({ canOrderCountry, Countryname , key }: Props) => {
   return (
     <div
-      key={Countryname}
+      key={key}
       className="w-[400px] h-[200px] relative group rounded-[10px] overflow-hidden transition-all duration-100 ease-in "
     >
       <div

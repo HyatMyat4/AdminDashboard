@@ -2,20 +2,28 @@
 import React from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react'
 import {
   SideBarOpenCLoseENgin,
   SideBarOpenCLoseC,
 } from "../../Redux/ActionSlice";
 import { useState } from "react";
-const SideBarOpenCLose = () => {
-  let top = window.scrollY;
+const SideBarOpenCLose = () => { 
   const dispatch = useDispatch();
   const openclose = useSelector(SideBarOpenCLoseC);
   const [topdata, settopdata] = useState<number>(0);
-  window.onscroll = () => {
-    let top = window.scrollY;
-    settopdata(top);
-  };
+
+  useEffect(() => {
+    if (window !== undefined) {
+    window.onscroll = () => {
+      let top = window.scrollY;
+      settopdata(top);
+    };
+  }
+  }, [])
+  
+
+
   return (
     <div className="flex-row-between select-none   4se:hidden ml-[10px] sm:ml-[15px] trasition">
       <HiBars3

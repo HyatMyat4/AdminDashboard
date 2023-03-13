@@ -13,28 +13,60 @@ import Link from "next/link";
 import { MdOutlineHistoryToggleOff } from "react-icons/md";
 import toast, { Toaster } from "react-hot-toast";
 import VerifyComponent from "./VerifyComponent";
+import { useEffect , } from "react";
 const Header = () => {
   const dispatch = useDispatch();
   const Order = useSelector(OrderproductC);
-  const getmemory = localStorage.getItem("Token");
-  const role = localStorage.getItem("Role");
   const [pathname, setpathname] = useState<string | undefined>("Home");
   const [Verify, setVerify] = useState<boolean>(false);
+  const [getmemory, setgetmemory] = useState<any>('');
+  const [role, setgrole] = useState<any>('');
+  const [count, setcount] = useState<any>(0);
+
+
+
+
   const notify = (e: string) => {
-    toast.success(e);
+    setcount(count+1)
+    const getmemory = localStorage.getItem("Token");
+    const role = localStorage.getItem("Role");    
+    setgetmemory(getmemory)
+    setgrole(role)  
+    if(count > 1){
+    toast.error(e);
+    }
   };
+
+  
+
+  useEffect(() => {
+    const getmemory = localStorage.getItem("Token");
+    const role = localStorage.getItem("Role");
+  
+    setgetmemory(getmemory)
+    setgrole(role)     
+  }, [setVerify])
+
+  useEffect(() => { 
+    if (window !== undefined) {
+      window.addEventListener("hashchange", () => {
+        const pathname = window.location.hash;
+        setpathname(pathname);
+      });
+    }
+    
+  }, [])
+
+
+
+
 
   if (getmemory) {
     const userdata = jwt_decode(getmemory);
     dispatch(LoginUserdataEngin({ userdata }));
   }
 
-  if (window !== undefined) {
-    window.addEventListener("hashchange", () => {
-      const pathname = window.location.hash;
-      setpathname(pathname);
-    });
-  }
+
 
   const isActive = pathname?.split("#").pop();
 

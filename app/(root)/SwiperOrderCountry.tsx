@@ -45,11 +45,11 @@ const SwiperOrderCountry = () => {
         }}
         >
          
-         {canOrderCountry.map(canOrderCountry => (
-        <SwiperSlide key={canOrderCountry.name} className=' w-auto sm:min-w-[400px] h-[auto] select-none animate-slideright2  dark:bg-[black]  ' >        
+         {canOrderCountry.map((canOrderCountry, i )=> (
+        <SwiperSlide key={i} className=' w-auto sm:min-w-[400px] h-[auto] select-none animate-slideright2  dark:bg-[black]  ' >        
              
                 <CanOrderCountry
-                     key={canOrderCountry.name}
+                     key={i}
                      canOrderCountry={canOrderCountry.name}
                      Countryname={canOrderCountry.Countryname}
                 />                                        

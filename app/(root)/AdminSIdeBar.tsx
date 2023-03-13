@@ -4,6 +4,7 @@ import { FaDharmachakra } from "react-icons/fa";
 import { categories } from "../../constants";
 import { HiXMark } from "react-icons/hi2";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect } from 'react'
 import {
   SideBarOpenCLoseC,
   SideBarOpenCLoseENgin,
@@ -11,6 +12,8 @@ import {
 const AdminSIdeBar = () => {
   const dispatch = useDispatch();
   const openclose = useSelector(SideBarOpenCLoseC);
+
+useEffect(() => {
   const body = document.getElementById("root") as HTMLElement;
 
   if (body && openclose === true) {
@@ -22,6 +25,10 @@ const AdminSIdeBar = () => {
       body.style.overflow = "";
     }
   }
+}, [])
+
+
+
 
   return (
     <div

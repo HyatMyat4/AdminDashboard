@@ -47,8 +47,8 @@ const ReviewSwiper = () => {
          
     
         {
-          Reviews_data.map(data => (
-            <SwiperSlide className='ReviewSlide mb-[20px]' >        
+          Reviews_data.map((data , index )=> (
+            <SwiperSlide key={index} className='ReviewSlide mb-[20px]' >        
             <CustomerReview data={data}/>                         
            </SwiperSlide>  
           ))
