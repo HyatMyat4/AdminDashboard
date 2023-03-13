@@ -3,7 +3,7 @@ type Props = {
     roles: any  
 }
 export const Delete_FoodProducts = async ( { id , roles }: Props)  => {  
-    const response = await fetch("http://localhost:4000/graphql",{
+    const response = await fetch("https://fastfoodbackend.onrender.com/graphql",{
      method: 'POST',
      headers: {
        'content-type': 'application/json'

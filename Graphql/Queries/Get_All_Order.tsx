@@ -1,7 +1,7 @@
 
   export const Get_All_Order = async ()  => {  
       try{
-      const response = await fetch("http://localhost:4000/graphql",{
+      const response = await fetch("https://fastfoodbackend.onrender.com/graphql",{
        next : { revalidate : 60}, 
        method: 'POST',
        headers: {

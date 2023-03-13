@@ -15,7 +15,7 @@ export const Add_Promote_FoodProducts = async ({name, Foodinfo , Outofstock , Ca
  const ReviewerName = "Hyat Myat"
  const ReviewerProfile = "https://platform-lookaside.fbsbx.com/platform/profilepic/?asid=554844826701391&height=50&width=50&ext=1677850526&hash=AeSSQ8xv4Qp4NY60yVo"
    try{
-  const response = await fetch("http://localhost:4000/graphql",{
+  const response = await fetch("https://fastfoodbackend.onrender.com/graphql",{
      method: 'POST',
      headers: {
        'content-type': 'application/json'

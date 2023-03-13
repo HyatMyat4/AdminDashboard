@@ -5,7 +5,7 @@ type Props = {
 }
 export const Updtae_User_Status = async ({id , Userstatus , UserRoles} : Props)  => {
     try{
-    const response = await fetch("http://localhost:4000/graphql",{
+    const response = await fetch("https://fastfoodbackend.onrender.com/graphql",{
      method: 'POST',
      headers: {
        'content-type': 'application/json'
