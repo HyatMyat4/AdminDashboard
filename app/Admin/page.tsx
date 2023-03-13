@@ -13,8 +13,6 @@ async function HomePage() {
   const { data: userdata } = await GET_Users();
 
  
- console.log(data,'🍕🍕')
- console.log(userdata,'🍬🍬')
 
   return (
     <div className="dark:bg-[#141937] w-[100%] h-auto overflow-hidden">

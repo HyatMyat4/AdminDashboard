@@ -14,9 +14,7 @@ function DashboardHeader() {
     <div className='w-full h-[7vh] flexRowCenter  items-center   justify-center 360:justify-between '>
     <div className='flexColCenter items-start ml-[10px] hidden 360:flex'>
         <span className=' font-bold text-[20px]' >DASHBOARD</span>
-        <div className='flexRowCenter'>
-      
-   
+        <div className='flexRowCenter'>   
       </div>
     </div>
     <div   className='flex flex-row select-none  text-white items-center px-[14px] py-[9px] rounded-[5px] mr-[10px]
@@ -30,26 +28,3 @@ function DashboardHeader() {
 
 export default DashboardHeader
 
-/*
-import TypeWriterEffect from 'react-typewriter-effect'  ;
-`${data?.user?.name  || userdata?.Login?.name }`,
-     <TypeWriterEffect
-        textStyle={{
-          fontFamily: '',
-          color: '#000000 dark:#FFFFFF',
-          fontWeight: 500,
-          fontSize: '14px',
-        }}
-        startDelay={2000}
-        cursorColor="#FFA500"
-        multiText={[
-          
-          'to your dashboard',             
-        ]}
-        multiTextDelay={1000}
-        typeSpeed={70}
-        backSpeed={50}
-        multiTextLoop
-      />  
-        <span className='mr-[5px] text-[14px]' >Welcome </span>   
-*/
