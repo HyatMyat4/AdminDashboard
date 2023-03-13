@@ -8,7 +8,15 @@ import { TotalCostEngin } from '../../Redux/ActionSlice'
 function User_Order() {
     const dispatch = useDispatch()
     const [ Order_Product , setOrder_Product ] = useState<any>()
-    const Order_id = localStorage.getItem("UserLastOrder_id")   
+    const [ Order_id , setOrder_id ] = useState<any>('')
+   
+useEffect(() => {
+  const Order_id = localStorage.getItem("UserLastOrder_id")  
+  setOrder_id(Order_id)
+}, [])
+
+
+     
 
 
     const Call_order = async  () => {

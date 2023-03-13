@@ -5,6 +5,7 @@ import { FaSearch, FaCaretDown } from "react-icons/fa";
 import DarkModeButton from "../(root)/DarkModeButton";
 import { useSession } from "next-auth/react";
 import { useDispatch, useSelector } from "react-redux";
+import { useEffect , useState } from 'react'
 import {
   LoginUserdataC,
   LoginUserdataEngin,
@@ -13,9 +14,17 @@ import {
 } from "../../Redux/ActionSlice";
 
 import jwt_decode from "jwt-decode";
-import { useEffect } from "react";
+
 function RightHeader() {
-  const getmemory = localStorage.getItem("Token");
+  const [ getmemory ,setgetmemory] = useState<any>('')
+  useEffect(() => {
+    const getmemory = localStorage.getItem("Token");
+    setgetmemory(getmemory)
+  }, [])
+  
+
+  
+  
   const dispatch = useDispatch();
   const sidebar = useSelector(AdminSideBarC);
   useEffect(() => {

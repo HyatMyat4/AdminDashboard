@@ -7,9 +7,14 @@ import { useSelector } from "react-redux";
 import { HiXMark } from "react-icons/hi2";
 import { useDispatch } from "react-redux";
 import { AdminSideBarEngin } from "../../Redux/ActionSlice";
+import { useEffect , useState } from 'react'
 function Adminleft() {
   const dispatch = useDispatch();
-  const Role = localStorage.getItem("Role");
+  const [Role ,setRole] = useState<any>('');
+  useEffect(() => {
+    const Role = localStorage.getItem("Role");
+    setRole(Role)
+  }, [])
   const openclose = useSelector(AdminSideBarC);
   return (
     <>

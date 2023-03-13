@@ -4,6 +4,7 @@ import { FaCartPlus } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { Delete_Img } from "../../../Graphql/Mutations/DeleteImg";
 import { Delete_FoodProducts } from "../../../Graphql/Mutations/DeleteProduct";
+import { useEffect , useState } from 'react'
 import {
   Delete_Items_idEngin,
   Delete_Items_idC,
@@ -14,7 +15,11 @@ import toast, { Toaster } from "react-hot-toast";
 function DeleteProductBtn() {
   const items = useSelector(Delete_Items_idC);
   const dispatch = useDispatch();
-  const Role = localStorage.getItem("Role");
+  const [ Role , setRole ] = useState<any>('');
+  useEffect(() => {
+    const Role = localStorage.getItem("Role");
+    setRole(Role)
+  }, [])
   const id = items.id;
   const notify = () => toast.success("Delete Product Success");
   const notifyEarr = (e: any) => toast.error(e);

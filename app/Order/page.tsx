@@ -18,7 +18,16 @@ import toast, { Toaster } from 'react-hot-toast';
 import { Ring } from '@uiball/loaders'
 import { useState } from 'react'
 function page() {
+    const [getmemory ,setgetmemory] = useState<any>('')
+
+    
+   useEffect(() => {
     const getmemory = localStorage.getItem("Token")
+    setgetmemory(getmemory)
+   }, [])
+   
+
+    
     const dispatch = useDispatch()
     const notifySuccess = (e : string) => toast.success(e);
     const notifyEarr = (e : string) => toast.error(e);

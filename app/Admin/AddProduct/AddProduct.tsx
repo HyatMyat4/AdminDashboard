@@ -24,12 +24,11 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import { Add_FoodProducts } from "../../../Graphql/Mutations/AddProduct";
 import { Delete_FoodProducts } from "../../../Graphql/Mutations/DeleteProduct";
 import toast, { Toaster } from "react-hot-toast";
-
 function AddProduct() {
   const imageRef = React.useRef<HTMLInputElement>(null);
   const dispatch = useDispatch();
   const openclose = useSelector(AddProductOPenCloseC);
-  const Role = localStorage.getItem("Role");
+  
   const [image, setiamge] = useState();
   const [url, seturl] = useState("");
   const [uploadProcess, setprocess] = useState();
@@ -38,6 +37,13 @@ function AddProduct() {
   const [Productinfo, setProductinfo] = React.useState("");
   const [ProductPrice, setProductPrice] = React.useState("");
   const [OustStock, setOustStock] = React.useState("");
+  const [Role, setRole] = useState<any>('');
+ 
+  useEffect(() => {
+    const Role = localStorage.getItem("Role");
+    setRole(Role)
+  }, [])
+  
 
   // @ts-ignore
   const [PassCross, setPassCross] = React.useState<PropsCross>({});
@@ -102,6 +108,7 @@ function AddProduct() {
 
   useEffect(() => {
     uploadimage();
+    
   }, [setiamge, image]);
 
   useEffect(() => {
