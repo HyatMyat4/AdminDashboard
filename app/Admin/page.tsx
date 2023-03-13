@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Adminleft from "./Adminleft";
 import RightHeader from "./RightHeader";
@@ -7,9 +8,22 @@ import { GET_Users } from "../../Graphql/Queries/Users";
 import DashboardHeader from "./DashboardHeader";
 import DashboardFirstRow from "./DashboardFirstRow";
 import DashBoardSecondRow from "./DashBoardSecondRow";
-async function HomePage() {
+import { useEffect , useState } from "react";
+ function HomePage() {
+  const [data , setdata] = useState<any>()
+  const [userdata , setuserdata] = useState<any>()
+  useEffect(() => {
+    fetchdata()
+  }, [])
+  
+ const fetchdata = async () => {
   const { data } = await GET_FoodProducts();
   const { data: userdata } = await GET_Users();
+  setdata(data)
+  setuserdata(userdata)
+ }
+ 
+ 
 
   return (
     <div className="dark:bg-[#141937] w-[100%] h-auto overflow-hidden">
@@ -20,7 +34,7 @@ async function HomePage() {
           <DashboardFirstRow data={userdata} />
         </div>
         <div className="w-full h-[1000px] 6xl:h-[50%]">
-          <DashBoardSecondRow data={data.FoodProducts} />
+          <DashBoardSecondRow data={data?.FoodProducts} />
         </div>
       </div>
     </div>

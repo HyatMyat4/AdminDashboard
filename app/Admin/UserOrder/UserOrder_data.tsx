@@ -8,7 +8,7 @@ function UserOrder_data({ data }: Props) {
   return (
     <div
       key={data.id}
-      className="w-[98%] h-[800px] shadow-lg 1lg:h-[500px] flexColCenter 1lg:flexRowCenter mt-[10px] bg-gray-200 dark:bg-[#191f48]  justify-center m-auto rounded-[5px] overflow-hidden "
+      className="w-[98%] h-[800px] shadow-lg 1lg:h-[500px] flexColCenter 1lg:flexRowCenter mt-[15px] bg-gray-200 dark:bg-[#191f48]  justify-center m-auto rounded-[5px] overflow-hidden "
     >
       <div className="w-full 1lg:w-[30%] h-[38%] 1lg:h-full   flexColCenter items-start justify-around   ">
         <div className="w-full h-[11%] flexRowCenter justify-center shadow-lg hidden 1lg:flex bg-slate-200 dark:bg-[#1d2456]">

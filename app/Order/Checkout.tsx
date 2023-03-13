@@ -32,8 +32,7 @@ function Checkout({userdata , notifyEarr , setloding} : any) {
            localStorage.setItem("UserLastOrder_id",order_id)
           const Check_outdata = await stripe?.redirectToCheckout({
              sessionId : id 
-          })       
-          console.log( id ,"🍓🍓")
+          })         
           if(id){
             setloding(false)
           }          

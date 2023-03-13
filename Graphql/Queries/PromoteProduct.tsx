@@ -1,6 +1,5 @@
 
-export const GET_PromoteProducts = async ()  => {
-    console.log("🍤🍤")
+export const GET_PromoteProducts = async ()  => {    
     try{
     const response = await fetch("http://localhost:4000/graphql",{
      method: 'POST',

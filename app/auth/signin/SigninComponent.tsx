@@ -6,8 +6,8 @@ type Props = {
     providers: Awaited<ReturnType<typeof getProviders>>;
 }
 function SigninComponent({providers}: Props) {
+
   const SinglePRovider = Object.values(providers!).map((provider) => { return provider  })
-  console.log(SinglePRovider,'P')
   return (
     <div className='w-full h-screen flexColCenter items-center justify-center '>
       

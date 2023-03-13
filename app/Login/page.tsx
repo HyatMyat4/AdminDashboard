@@ -46,8 +46,7 @@ function page() {
   }, [Password, setPassword]);
  
   const handleLogin = async () => {
-    if(!Email || !Password ) return;
-    console.log({Email : Email, Password : Password})
+    if(!Email || !Password ) return;   
     try{
      const  login = await fetch("http://localhost:4000/auth/login", {
       method: "POST",
@@ -57,10 +56,10 @@ function page() {
     const Token = await login.json();
      if(Token){      
       localStorage.setItem("Token",Token.accessToken)
-      console.log(Token,'login Token')
+    
       const  data  = jwt_decode(Token.accessToken) 
       dispatch(LoginUserdataEngin({data}))
-      console.log(data,'login Token')     
+        
       notifySuccess("Success Login")
       router.push('/')
      }

@@ -17,10 +17,10 @@ function DashBoardSecondRow({data} : Props) {
            <div className='w-[17%] h-full flexRowCenter justify-center hidden lg:flex text-center '>Product Popular</div>
            <div className='w-[13%] h-full flexRowCenter justify-center  hidden 3lg:flex text-center '>Out of Stock</div>
            <div className='w-[13%] h-full flexRowCenter justify-center text-center'>Product Price</div>
-           <div className='w-[14%] h-full flexRowCenter justify-center text-center '>Total <span className='hidden lg:flex ml-[5px]'>Product</span> <span className=' text-emerald-500 ml-[5px]'>{data.length}</span></div>           
+           <div className='w-[14%] h-full flexRowCenter justify-center text-center '>Total <span className='hidden lg:flex ml-[5px]'>Product</span> <span className=' text-emerald-500 ml-[5px]'>{data?.length}</span></div>           
            </div>
            <div id="scrollnone" className='w-full h-[85%] 6xl:h-[82%] overflow-y-scroll'>
-            { data.map((data : FoodProduct) => (
+            { data?.map((data : FoodProduct) => (
               <DashBoardProduct data={data}/>
             ))
             }

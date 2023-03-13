@@ -7,6 +7,29 @@ export const categories: Category[] = [
    "Review" 
 ] 
 
+export const Reviews_data : Reviews_data[] = [
+  {
+    user_img: "/customer.png",
+    user_name : "Jhon Doe",
+    Review_text :"Dining out, going for a movie, or enjoying a bottle of fine wine are all ‘experience goods’, that is, they have to be consumed or experienced in order for them to be assessed and evaluated. Online customer reviews are valuable as they allow potential consumers to get in-depth information from others for a relatively low cost and little effort. With one click, they can solve an information asymmetry problem in which service providers are better informed than customers. The internet allows customers to share their views and feedback cheaply and efficiently with a large audience." 
+  },
+  {
+    user_img: "/pic-4.png",
+    user_name : "Charlotte",
+    Review_text :"In general, tacos can be a good source of protein and fiber that isn't too high in calories. However, certain condiments or extra items can significantly increase the number of calories and amounts of fat or salt. This is particularly true of tacos from restaurants." 
+  },
+  {
+    user_img: "/pic-1.png",
+    user_name : "James",
+    Review_text :"Cheese and tomatoes have some of the highest natural levels of glutamate. Glutamate: an amino acid (one of the building blocks of DNA) is found in every pizza ingredient and is a critical component in giving pizza its flavor. Glutamate is found in protein-rich foods like wheat flour, cheese, meat and some vegetables." 
+  },
+  {
+    user_img: "/pic-2.png",
+    user_name : "Sophia",
+    Review_text :"And they are known to help improve health like depression issues, heart functioning, energy, and are good for the skin as well. So adding chocolate to your cake will not only make it mouthwatering but also healthy." 
+  },
+]
+
 export const canOrderCountry: canOrderCountry[] = [
    {
      name:"/NewYounk.jpg",

@@ -35,9 +35,6 @@ function page() {
     const  Pure_OrderProduct = useSelector(Pure_OrderProductC)    
     const { userdata } =useSelector(LoginUserdataC)
     const { data  } = useSession();
-
-   
-    console.log(Pure_OrderProduct,'🌸🌺🍕')
   return (
     <div className='w-screen h-screen '>
      

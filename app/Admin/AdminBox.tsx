@@ -20,7 +20,7 @@ function AdminBox({ data }: Props) {
               id="cursive"
               className="w-[90%] h-[60px] text-[20px] flexRowCenter   text-start m-auto"
             >
-              {data.Users?.length}
+              {data?.Users?.length}
             </div>
             <div className="w-[90%] h-[60px] m-auto flexRowCenter justify-between">
               <span className=" font-bold">+17%</span>

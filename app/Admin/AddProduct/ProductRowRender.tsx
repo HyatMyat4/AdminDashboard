@@ -16,7 +16,7 @@ function ProductRowRender({ data }: Props) {
 
   useEffect(() => {
     dispatch(ProductdataEngin([...data.FoodProducts]));
-  }, []);
+  }, [data]);
 
   const productdata = useSelector(ProductdataC);
 

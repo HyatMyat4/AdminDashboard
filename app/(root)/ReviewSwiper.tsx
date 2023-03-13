@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-
+import { Reviews_data } from '../../constants'
 import "../../styles/globals.css";
 import SwiperCore,{ Autoplay } from 'swiper';
 
@@ -46,10 +46,14 @@ const ReviewSwiper = () => {
       >
          
     
-
-         <SwiperSlide className='ReviewSlide mb-[20px]' >        
-         <CustomerReview/>                         
-        </SwiperSlide>  
+        {
+          Reviews_data.map(data => (
+            <SwiperSlide className='ReviewSlide mb-[20px]' >        
+            <CustomerReview data={data}/>                         
+           </SwiperSlide>  
+          ))
+        }
+        
       
      
       </Swiper>       

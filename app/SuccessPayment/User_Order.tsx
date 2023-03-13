@@ -10,7 +10,7 @@ function User_Order() {
     const [ Order_Product , setOrder_Product ] = useState<any>()
     const Order_id = localStorage.getItem("UserLastOrder_id")   
 
-    console.log(Order_id,'🍡🍡')
+
     const Call_order = async  () => {
         const { data } = await Get_Single_Order(Order_id)
         setOrder_Product(data.User_Order)
@@ -23,7 +23,7 @@ function User_Order() {
     }, [])
     
 
-    console.log(Order_Product,'🌹🌹🌹')
+  
   return (
     <div id="scrollnone" className='w-full h-full overflow-y-scroll pb-[20px] relative ' >        
           { Order_Product ? Order_Product.Order_data?.map((product : any) => (

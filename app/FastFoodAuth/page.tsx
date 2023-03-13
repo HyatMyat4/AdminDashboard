@@ -101,9 +101,7 @@ function page() {
     setCropArea(croppedAreaPixels);
   };
 
-  const HandleUpload = async () => {
-    console.log(File, "File");
-    console.log(RealFile, "RealFile");
+  const HandleUpload = async () => {  
     if (!Name || !Email || !Password || !URL) return;
     const data = await Register_User({ 
       name: Name,
@@ -112,8 +110,7 @@ function page() {
       image: URL ,
       PhoneNumber: PhoneNumber ,
       Userstatus: RoleCode === 'Admin8765400744' ? RoleCode : 'New'
-    })
-    console.log(data, "🌲")
+    })   
     if(data){
       notifySuccess("Regiter Success")
       router.push('/Login')
@@ -136,7 +133,7 @@ function page() {
     const canvasDataUrl = canvas.toDataURL(RealFile[0].type);
     const convertedUrlToFile = dataURLtoFile(canvasDataUrl,RealFile[0].name);
    
-    console.log(convertedUrlToFile,'convertedUrlToFile')
+    
     const storageRef = ref(storage, `HyatMyat.`+convertedUrlToFile.type.slice(6));
     // @ts-ignore
     const metadata = { contentType: convertedUrlToFile.type };
@@ -144,14 +141,13 @@ function page() {
     // ${uuidv4()}
     uploadTask.on('state_changed', (snapshot) => {
       const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      console.log('Upload is ' + progress + '% done');              
+                   
       setProcess(progress) 
     },(err) => {
       console.log(err.message)
     },  () => {
       // Upload completed successfully, now we can get the download URL
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-        console.log('File available at', downloadURL);
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {       
         if(downloadURL){          
         setURL(downloadURL)
         setFile(undefined)

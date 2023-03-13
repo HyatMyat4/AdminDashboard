@@ -122,4 +122,8 @@ type User_Orders =  {
     Order_data : Order_data[]
 }
 
- 
+type Reviews_data = {
+    user_img: string
+    user_name : string
+    Review_text : string
+} 

@@ -1,12 +1,24 @@
+"use client"
 import React from "react";
 import { Get_All_Order } from "../../../Graphql/Queries/Get_All_Order";
 import SearchComponent from "../SearchComponent";
 import User_Order_Component from "./User_Order_Component";
 import { BsPersonLinesFill } from "react-icons/bs";
-async function page() {
+import { async } from "@firebase/util";
+import { useEffect , useState } from "react"
+ function page() {
+   const [data , setdata] = useState<any>()
+  useEffect(() => {
+    fetchdata()
+  }, [])
+  
+ const fetchdata = async () => {
   const { data } = await Get_All_Order();
-  const Puredata = data.User_Orders.filter((data: any) => data.email !== null);
-  console.log(data, "😎");
+  setdata(data)
+ }
+  
+  const Puredata = data?.User_Orders.filter((data: any) => data.email !== null);
+  
   return (
     <div className="w-full h-[93vh]">
       <div className="w-full h-[17%] 390:h-[12%] xs:h-[7%] flexColCenter xs:flexRowCenter justify-around xs:justify-between  ">
@@ -28,3 +40,4 @@ async function page() {
 export default page;
 
 // stripe listen --forward-to localhost:4000/checkout/WebHook
+
