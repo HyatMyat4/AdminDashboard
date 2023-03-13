@@ -928,7 +928,7 @@
     "d3-scale-chromatic" "^2.0.0"
     "lodash" "^4.17.21"
 
-"@nivo/core@0.80.0":
+"@nivo/core@^0.80.0", "@nivo/core@0.80.0":
   "integrity" "sha512-6caih0RavXdWWSfde+rC2pk17WrX9YQlqK26BrxIdXzv3Ydzlh5SkrC7dR2TEvMGBhunzVeLOfiC2DWT1S8CFg=="
   "resolved" "https://registry.npmjs.org/@nivo/core/-/core-0.80.0.tgz"
   "version" "0.80.0"
