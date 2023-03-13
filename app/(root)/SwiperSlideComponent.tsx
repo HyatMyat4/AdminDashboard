@@ -40,7 +40,7 @@ const SwiperSlideComponent = ({data} : Props) => {
           <FaStar/> 
           <FaStarHalfAlt/>
          </span> 
-         <span className="text-[30px] mt-[10px] text-emerald-400 animate-slideright3  ">$ <span>{data.Price}</span></span>
+         <span className="text-[30px] mt-[10px] text-emerald-400 animate-slideright2    ">$ <span>{data.Price}</span></span>
          <div onClick={() => handleAdd(data.name)}
          className="flexRowCenter px-[14px] animate-slideleft4   py-[8px] bg-orange-500 rounded  text-slate-100 hover:scale-110 
          transition-all duration-75 ease-in cursor-pointer my-[15px] ">

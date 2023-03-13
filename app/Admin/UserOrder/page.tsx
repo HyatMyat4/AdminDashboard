@@ -1,21 +1,15 @@
-"use client"
+
 import React from "react";
 import { Get_All_Order } from "../../../Graphql/Queries/Get_All_Order";
 import SearchComponent from "../SearchComponent";
 import User_Order_Component from "./User_Order_Component";
 import { BsPersonLinesFill } from "react-icons/bs";
 import { async } from "@firebase/util";
-import { useEffect , useState } from "react"
- function page() {
-   const [data , setdata] = useState<any>()
-  useEffect(() => {
-    fetchdata()
-  }, [])
-  
- const fetchdata = async () => {
+
+async function page() {
+
   const { data } = await Get_All_Order();
-  setdata(data)
- }
+
   
   const Puredata = data?.User_Orders.filter((data: any) => data.email !== null);
   

@@ -1,8 +1,7 @@
 "use client"
 import React from 'react'
 import AdminBox from './AdminBox'
-  import OverviewChart from './OverviewChart';
-  import { dataTransaction } from "../../constants"
+  import OverviewChart from './OverviewChart'; 
 type Props= {
   data : All_Users[]
 }

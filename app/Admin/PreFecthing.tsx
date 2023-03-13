@@ -15,7 +15,7 @@ function PreFecthing({ data }: Props) {
     } catch (err) {
       console.warn(err);
     }
-  }, []);
+  }, [data]);
 
   return <div></div>;
 }

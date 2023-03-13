@@ -8,8 +8,6 @@ type Props = {
 }
 function SigninComponent({providers}: Props) {
  
- 
-  console.log(providers,"🍕🍕")
 
   return (
     <div className='w-full h-screen flexColCenter items-center justify-center '>

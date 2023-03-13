@@ -31,7 +31,7 @@ const FoodCard = ({ Productdata }: Props) => {
         id="cursive"
         key={Productdata.id}
         className="w-[350px] h-[auto] bg-white dark:bg-[#101010] rounded-[5px] hover:scale-110 cursor-pointer 
-     transition-all  duration-75 ease-in mt-[30px] mx-[14px] animate-slidedown "
+     transition-all  duration-75 ease-in mt-[30px] mx-[14px]  animate-slowfade "
       >
         <div className="w-[95%] h-auto 670:h-[230px] m-auto pt-[7px] rounded overflow-hidden">
           <Image

@@ -26,7 +26,7 @@ const Dishes = ({ data }: Props) => {
   return (
     <div>
       <section id="Food" className="w-full h-[auto]0lg:py-[30px] pb-[50px] ">
-        <div className="flexColCenter my-[10px]">
+        <div className="flexColCenter my-[10px] animate-slowfade">
           <span className="text-[18px] font-bold text-orange-500">
             Our Dishes
           </span>
