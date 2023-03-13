@@ -10,11 +10,13 @@ function PreFecthing({ data }: Props) {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    if(data){
     try {
       dispatch(ProductdataEngin([...data.FoodProducts]));
     } catch (err) {
       console.warn(err);
     }
+  }
   }, [data]);
 
   return <div></div>;

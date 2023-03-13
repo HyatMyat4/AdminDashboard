@@ -45,7 +45,7 @@ const Header = () => {
   
     setgetmemory(getmemory)
     setgrole(role)     
-  }, [setVerify])
+  }, [])
 
   useEffect(() => { 
     if (window !== undefined) {

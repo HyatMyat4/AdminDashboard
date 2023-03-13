@@ -54,6 +54,8 @@ function VerifyComponent({ setVerify }: any) {
         notifySuccess(`Success Verify You are ${Success.Status}`);
         localStorage.setItem("Role", Success.Status);
         setVerify(false);
+      }else{
+        notifyEarr(` Verify Failed!`);
       }
     } catch (err) {
       console.warn(err);

@@ -22,7 +22,7 @@ useEffect(() => {
     const Call_order = async  () => {
         const { data } = await Get_Single_Order(Order_id)
         setOrder_Product(data.User_Order)
-        dispatch(TotalCostEngin(data.User_Order.amount))
+        dispatch(TotalCostEngin(data.User_Order?.amount))
     }   
     
 
