@@ -22,10 +22,10 @@ function SigninComponent({providers}: Props) {
            className='w-[35px]'
           />
           <span className='w-[85%] ml-[15px] text-start' >
-            Sign in with {providers?.google.name}
+            Sign in with Google
           </span>
         </div>
-        <div key={providers?.github.name} onClick={() => signIn(providers?.github.id,{
+        <div key={providers?.github.name} onClick={() => signIn("github",{
           callbackUrl: "https://admin-dashboard-hyatmyat4.vercel.app"
         })} className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white] bg-[#101010]   rounded-[5px] mb-[10px]'>
@@ -34,10 +34,10 @@ function SigninComponent({providers}: Props) {
            className='w-[37px] rounded-full'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
-            Sign in with {providers?.github.name}
+            Sign in with Github
           </span>
         </div>
-        <div key={ providers?.facebook.name} onClick={() => signIn(providers?.facebook.id,{
+        <div key={ providers?.facebook.name} onClick={() => signIn("facebook",{
           callbackUrl: "https://admin-dashboard-hyatmyat4.vercel.app"
         })} id='linerColour3' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white]   rounded-[5px] mb-[10px]'>
@@ -46,7 +46,7 @@ function SigninComponent({providers}: Props) {
            className='w-[37px]'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
-            Sign in with {providers?.facebook.name}
+            Sign in with Facebook
           </span>
         </div>
         <Link  href="/FastFoodAuth" id='linerColour4' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
@@ -59,7 +59,7 @@ function SigninComponent({providers}: Props) {
             Sign in with FastFood
           </span>
         </Link>
-        <div key={providers?.instagram.name} onClick={() => signIn(providers?.instagram.id,{
+        <div key={providers?.instagram.name} onClick={() => signIn("instagram",{
           callbackUrl: "https://admin-dashboard-hyatmyat4.vercel.app"
         })} id='linerColour2' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white]   rounded-[5px] mb-[10px]'>
@@ -68,7 +68,7 @@ function SigninComponent({providers}: Props) {
            className='w-[37px]'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
-            Sign in with {providers?.instagram.name}
+            Sign in with Instagram
           </span>
         </div>
    
