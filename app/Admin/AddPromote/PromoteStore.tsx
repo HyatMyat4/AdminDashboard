@@ -22,7 +22,7 @@ function PromoteStore({ data }: Props) {
   return (
     <div>
       {Get_data
-        ? Get_data.map((Product: FoodProduct) => (
+        ? Get_data?.map((Product: FoodProduct) => (
             <PromoteBanner data={Product} />
           ))
         : "loding.."}

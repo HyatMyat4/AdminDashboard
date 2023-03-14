@@ -17,6 +17,8 @@ import { LeapFrog } from "@uiball/loaders";
 import toast, { Toaster } from "react-hot-toast";
 import { AdminSideBarEngin } from "../../Redux/ActionSlice";
 import { useDispatch } from "react-redux";
+import { DotPulse } from '@uiball/loaders'
+
 
 import Link from "next/link";
 
@@ -40,7 +42,16 @@ const AdminCreatory = () => {
           <IoHomeOutline className="text-[20px]" />
           <span className="font-bold">Dashboard</span>
           {pathname === "/Admin" ? (
+            <>
             <LeapFrog size={40} speed={2.5} color="#F97316" />
+           <div className=" hidden">
+           <DotPulse 
+            size={40}
+            speed={1.4} 
+            color="#F97316" 
+            />
+           </div>
+            </>
           ) : (
             <TfiAngleRight className="text-[25px] " />
           )}
