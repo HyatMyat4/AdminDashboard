@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FaStar, FaStarHalf , FaShippingFast } from 'react-icons/fa'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Orderproduct__id , OrderproductEngin , OrderproductRemoveEngin , TotalPrice } from '../../../Redux/ActionSlice'
+import { Orderproduct__id , OrderproductEngin , OrderproductRemoveEngin , TotalPrice } from '../../Redux/ActionSlice'
 import { useDispatch } from 'react-redux'
 
 type Props = {
@@ -18,11 +18,11 @@ function OrderProduct({data } : Props ) {
   const Max = 5
   const [rating] = useState(Math.floor(Math.random() * (Max - Min + 1  )) + Min )
   const ProductPopular =  Math.floor(Math.random() * 50000)
-
+ console.log(filterProduct[0],'🍕🍕')
   return (
     <>     
-    <div key={filterProduct[0]?.id} className={` ${filterProduct[0]?.id ? "" : "hidden"} w-full h-auto flexColCenter  
-    775:flexRowCenter justify-between mt-[10px] animate-slowfade2  `}>      
+    <div key={filterProduct[0]?.id} className={` ${ filterProduct.length ? "flexColCenter 775:flexRowCenter   " : " hidden"}  w-full h-auto 
+    justify-between mt-[10px] animate-slowfade2  `}>      
     <div className='w-[95%] h-full flexColCenter  775:flexRowCenter p-[15px] 775:p-0 relative justify-between mt-[10px] m-auto bg-[#e3e3e3] overflow-hidden  dark:bg-[#3636363e] rounded-[5px] '>
     <div className=' absolute top-[6px] right-[6px] px-[7px] py-[4px] text-[15px] bg-teal-500 text-white rounded-full' >x{filterProduct.length}</div>
      <div  className={`absolute w-[150px] h-auto flexRowCenter ${ TotalPriceC > 30 ? "" : "hidden"} rounded justify-center bg-orange-500 rotate-[-30deg]  text-white top-[20px] left-[-20px] `} >

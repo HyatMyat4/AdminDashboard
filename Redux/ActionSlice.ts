@@ -13,7 +13,8 @@ const initialState = {
   Orderproduct: []  as FoodProduct[],
   Pure_OrderProduct: [] as FoodProduct[],
   TotalCost : "" ,
-  AdminSideBar: false
+  AdminSideBar: false ,
+  OrderOpenclose : false
 }
 
 
@@ -66,6 +67,9 @@ export const Actionslice = createSlice({
       TotalCostEngin: (state , action) => { 
          state.TotalCost  = action.payload
       },
+      OrderOpencloseEngin: (state , action) => { 
+         state.OrderOpenclose  = action.payload
+      },
       AdminSideBarEngin: (state , action) => { 
          state.AdminSideBar  = action.payload
       },
@@ -108,7 +112,8 @@ export const  {
     OrderproductEngin,
     OrderproductRemoveEngin,
     TotalCostEngin,
-    AdminSideBarEngin
+    AdminSideBarEngin,
+    OrderOpencloseEngin
 } = Actionslice.actions
 
 export const  SideBarOpenCLoseC = (state : any) => state.actionslice.SideBarOpenCLose
@@ -124,6 +129,7 @@ export const  OrderproductC = (state : any) => state.actionslice.Orderproduct
 export const  Pure_OrderProductC = (state : any) => state.actionslice.Pure_OrderProduct
 export const  TotalCostC = (state : any) => state.actionslice.TotalCost
 export const  AdminSideBarC = (state : any) => state.actionslice.AdminSideBar
+export const  OrderOpencloseC = (state : any) => state.actionslice.OrderOpenclose
 export const  TotalPrice = (state : any) => state.actionslice.Orderproduct.reduce((total : any , items : any) => total + Number(items.Price) , 0)
 export const  Orderproduct__id = (state : any , id : any) => state.actionslice.Orderproduct.filter((product : FoodProduct) => product.id === id )
 

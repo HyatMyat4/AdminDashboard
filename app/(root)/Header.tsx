@@ -7,7 +7,7 @@ import React, { useState } from "react";
 import SideBarOpenCLose from "./SideBarOpenCLose";
 import Auth from "./Auth";
 import jwt_decode from "jwt-decode";
-import { LoginUserdataEngin, OrderproductC } from "../../Redux/ActionSlice";
+import { LoginUserdataEngin, OrderproductC , OrderOpencloseEngin } from "../../Redux/ActionSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Link from "next/link";
 import { MdOutlineHistoryToggleOff } from "react-icons/md";
@@ -127,14 +127,14 @@ const Header = () => {
             </div>
           )}
 
-          <Link href="/Order">
+          <div onClick={() => dispatch(OrderOpencloseEngin(true))}>
             <div className="Header-icon relative group">
               <span className=" absolute top-[-4px] right-[-9px] text-[11px] w-[23px] h-[23px] flex flex-roe items-center justify-center text-center text-white bg-emerald-400 hover:bg-teal-400 rounded-full">
                 {Order.length}
               </span>
               <FaShoppingCart className="text-[23px] text-sky-400 group-hover:text-slate-200 " />
             </div>
-          </Link>
+          </div>
           <Auth />
         </div>
       </div>

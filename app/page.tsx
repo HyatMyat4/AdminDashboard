@@ -5,6 +5,7 @@ import HomePage from './page'
 import About from './(root)/About'
 import Menu from './(root)/Menu'
 import Review from './(root)/Review'
+import Order from "./(root)/Order"
 import AdminSIdeBar from './(root)/AdminSIdeBar'
 import  {  GET_FoodProducts }   from "../Graphql/Queries/Products"
 import  {  GET_PromoteProducts }   from "../Graphql/Queries/PromoteProduct"
@@ -16,6 +17,7 @@ async function Homepage () {
   return (
     <>     
           <Header/>        
+          <Order/>
           <AdminSIdeBar/>      
           <Home  data={Promotedata}/>          
           <Dishes data={data}/>   

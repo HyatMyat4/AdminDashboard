@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import {  Pagination, Mousewheel, Keyboard } from "swiper";
-import "../../../styles/globals.css";
+import "../../styles/globals.css";
 import SwiperSlideOrder from './SwiperSlideOrder';
 
 function OrderPromote({data} : any) {
