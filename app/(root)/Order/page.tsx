@@ -1,14 +1,14 @@
 "use client"
 import React from 'react'
 import { useSelector } from 'react-redux'
-import DarkModeButton from '../(root)/DarkModeButton'
-import { OrderproductC , TotalPrice , Promote_ProductC , Pure_OrderProductC , LoginUserdataC , LoginUserdataEngin , Promote_ProductEngin} from '../../Redux/ActionSlice'
+import DarkModeButton from '../DarkModeButton'
+import { OrderproductC , TotalPrice , Promote_ProductC , Pure_OrderProductC , LoginUserdataC , LoginUserdataEngin , Promote_ProductEngin} from '../../../Redux/ActionSlice'
 import Link from 'next/link'
 import { FaArrowAltCircleLeft, FaShippingFast } from 'react-icons/fa'
 import OrderProduct from './OrderProduct'
 import OrderPromote from './OrderPromote'
 import { MdOutlinePayment } from 'react-icons/md'
-import Auth from '../(root)/Auth'
+import Auth from '../Auth'
 import { useSession  } from "next-auth/react";
 import Checkout from './Checkout'
 import { useDispatch } from 'react-redux'
@@ -17,7 +17,7 @@ import jwt_decode from "jwt-decode"
 import toast, { Toaster } from 'react-hot-toast';
 import { Ring } from '@uiball/loaders'
 import { useState } from 'react'
-import { GET_PromoteProducts } from '../../Graphql/Queries/PromoteProduct'
+import { GET_PromoteProducts } from '../../../Graphql/Queries/PromoteProduct'
 function page() {
     const [getmemory ,setgetmemory] = useState<any>('')
 

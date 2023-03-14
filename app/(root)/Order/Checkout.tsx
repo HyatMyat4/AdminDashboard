@@ -3,7 +3,7 @@ import React from 'react'
 import { loadStripe } from '@stripe/stripe-js'
 import axios from 'axios';
 import { useSelector } from 'react-redux'
-import { OrderproductC , LoginUserdataC } from '../../Redux/ActionSlice'
+import { OrderproductC , LoginUserdataC } from '../../../Redux/ActionSlice'
 import { useSession  } from "next-auth/react";
 
 

@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FaStar, FaStarHalf , FaShippingFast } from 'react-icons/fa'
 import { useState } from 'react'
 import { useSelector } from 'react-redux'
-import { Orderproduct__id , OrderproductEngin , OrderproductRemoveEngin , TotalPrice } from '../../Redux/ActionSlice'
+import { Orderproduct__id , OrderproductEngin , OrderproductRemoveEngin , TotalPrice } from '../../../Redux/ActionSlice'
 import { useDispatch } from 'react-redux'
 
 type Props = {

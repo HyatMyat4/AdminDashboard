@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { FaShoppingCart, FaStar } from 'react-icons/fa'
 import { useDispatch } from 'react-redux'
 import toast, { Toaster } from 'react-hot-toast';
-import { OrderproductEngin } from '../../Redux/ActionSlice'
+import { OrderproductEngin } from '../../../Redux/ActionSlice'
 type Props= {
     data : FoodProduct
 }
