@@ -7,7 +7,7 @@ type Props = {
     providers: Awaited<ReturnType<typeof getProviders>>;
 }
 function SigninComponent({providers}: Props) {
-
+console.log(providers,'🥭🥭')
 
   return (
     <div className='w-full h-screen flexColCenter items-center justify-center '>
