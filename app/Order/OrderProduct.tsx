@@ -13,8 +13,7 @@ function OrderProduct({data } : Props ) {
   const dispatch = useDispatch()
   const id = data.id
   const TotalPriceC = useSelector(TotalPrice)
-  const filterProduct = useSelector((state) => Orderproduct__id(state,id))
-  console.log(filterProduct,'🌺🌺🌸OK')
+  const filterProduct = useSelector((state) => Orderproduct__id(state,id))  
   const Min = 1
   const Max = 5
   const [rating] = useState(Math.floor(Math.random() * (Max - Min + 1  )) + Min )

@@ -206,7 +206,7 @@ function page() {
 
         <div className="font-bold w-full h-[80px] flexRowCenter text-[20px] z-50  justify-center">
           Create and Account{" "}
-          <img src="/Food.png" className="w-[50px] h-auto rounded ml-2" />
+          <img src="/food.png" className="w-[50px] h-auto rounded ml-2" />
         </div>
         <input
           type="file"

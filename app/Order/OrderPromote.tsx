@@ -11,7 +11,7 @@ import "../../styles/globals.css";
 import SwiperSlideOrder from './SwiperSlideOrder';
 
 function OrderPromote({data} : any) {
-    console.log(data,'🍇🍇')
+    
   
   return (
     <div className='w-full h-full flexRowCenter justify-between  '>
