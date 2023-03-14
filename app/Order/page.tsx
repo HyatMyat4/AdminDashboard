@@ -2,7 +2,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import DarkModeButton from '../(root)/DarkModeButton'
-import { OrderproductC , TotalPrice , Promote_ProductC , Pure_OrderProductC , LoginUserdataC , LoginUserdataEngin} from '../../Redux/ActionSlice'
+import { OrderproductC , TotalPrice , Promote_ProductC , Pure_OrderProductC , LoginUserdataC , LoginUserdataEngin , Promote_ProductEngin} from '../../Redux/ActionSlice'
 import Link from 'next/link'
 import { FaArrowAltCircleLeft, FaShippingFast } from 'react-icons/fa'
 import OrderProduct from './OrderProduct'
@@ -17,6 +17,7 @@ import jwt_decode from "jwt-decode"
 import toast, { Toaster } from 'react-hot-toast';
 import { Ring } from '@uiball/loaders'
 import { useState } from 'react'
+import { GET_PromoteProducts } from '../../Graphql/Queries/PromoteProduct'
 function page() {
     const [getmemory ,setgetmemory] = useState<any>('')
 
@@ -24,8 +25,14 @@ function page() {
    useEffect(() => {
     const getmemory = localStorage.getItem("Token")
     setgetmemory(getmemory)
+    fecth_PRomote()
    }, [])
    
+
+    const fecth_PRomote = async () => {
+      const  {data }  = await GET_PromoteProducts()
+      dispatch(Promote_ProductEngin(data));
+    }
 
     
     const dispatch = useDispatch()

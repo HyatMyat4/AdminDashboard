@@ -284,7 +284,7 @@ function page() {
             only Letters allowed.
           </p>
         </div>
-        <div className="w-[90%] h-auto relative m-auto h-[auto] flexColCenter items-start mb-[20px]">
+        <div className="w-[90%] h-auto relative m-auto flexColCenter items-start mb-[20px]">
           <span className="font-bold text-[black] dark:text-[#A9ABAF] text-[14px]">
             EMAIL
           </span>
