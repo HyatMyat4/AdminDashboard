@@ -50,7 +50,7 @@ function SigninComponent({providers}: Props) {
         <Link  href="/FastFoodAuth" id='linerColour4' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white]    rounded-[5px] mb-[10px]'>
           <img
-           src="/Food.png"
+           src="/food.png"
            className='w-[45px] rounded-full'
           />
           <span className='w-[85%] ml-[15px]  text-start' >
