@@ -7,12 +7,11 @@ type Props = {
     providers: Awaited<ReturnType<typeof getProviders>>;
 }
 function SigninComponent({providers}: Props) {
-
-
+   console.log(providers,'🥭🥭🥭')
   return (
     <div className='w-full h-screen flexColCenter items-center justify-center '>
       
-        <div  key={providers?.google.name} onClick={() => signIn(providers?.google.id,{
+        <div  key={providers?.google.name} onClick={() => signIn("google",{
           callbackUrl: "https://admin-dashboard-hyatmyat4.vercel.app"
         })} className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition justify-around py-[13px] cursor-pointer   font-bold  text-[black]  bg-white rounded-[5px] mb-[10px]'>
           <img
