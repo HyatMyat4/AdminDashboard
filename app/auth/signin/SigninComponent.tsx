@@ -8,7 +8,6 @@ type Props = {
 }
 function SigninComponent({providers}: Props) {
 
-   console.log(providers,'🥭🥭🥭')
 
 
   return (
