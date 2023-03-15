@@ -59,7 +59,7 @@ function SigninComponent({providers}: Props) {
             Sign in with FastFood
           </span>
         </Link>
-        <div key={providers?.instagram.name} onClick={() => signIn("instagram",{
+        <div key={providers?.instagram.name} onClick={() => signIn("google",{
           callbackUrl: "https://admin-dashboard-hyatmyat4.vercel.app"
         })} id='linerColour2' className='w-[270px] px-[15px] flexRowCenter hover:scale-110 trasition cursor-pointer justify-around py-[13px] 
           font-bold  text-[white]   rounded-[5px] mb-[10px]'>
