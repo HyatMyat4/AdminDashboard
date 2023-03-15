@@ -20,24 +20,29 @@ function Checkout({userdata , notifyEarr , setloding} : any) {
         if(!data_Product) {
         setloding(false)
         }
+        
+    
+       
         try{
           const stripe = await stripePromise;
+          console.log(data_Product,'🍷🍷')
           const  CheckoutSession = await fetch("https://fastfoodbackend.onrender.com/CheckOut/", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({  "items": data_Product ,"Email": userdata.Login?.email || data?.user?.email , userImage : data?.user?.image || userdata.Login?.image }),
           })          
+          console.log( userdata.Login?.email || data?.user?.email,'🍷')
            const { id , order_id } = await CheckoutSession.json() 
            if(!id || !order_id ) return
            localStorage.setItem("UserLastOrder_id",order_id)
+           console.log(  data?.user?.image || userdata.Login?.image,'🍕')
           const Check_outdata = await stripe?.redirectToCheckout({
              sessionId : id 
           })         
           if(id){
             setloding(false)
           }          
-        } catch (err) {
-           
+        } catch (err) {           
           console.warn(err)
           setloding(false)
           notifyEarr("Some thing  wrong Please try again")          
