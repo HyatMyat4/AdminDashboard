@@ -64,7 +64,7 @@ function Order() {
     <div
       className={`w-full h-screen fixed  top-0 ${
         openclose ? "" : "hidden"
-      } bg-black z-[999]`}
+      }  bg-white dark:bg-black z-[999]`}
     >
       <div className="w-screen h-screen ">
         <div

@@ -18,7 +18,7 @@ function OrderProduct({data } : Props ) {
   const Max = 5
   const [rating] = useState(Math.floor(Math.random() * (Max - Min + 1  )) + Min )
   const ProductPopular =  Math.floor(Math.random() * 50000)
- console.log(filterProduct[0],'🍕🍕')
+
   return (
     <>     
     <div key={filterProduct[0]?.id} className={` ${ filterProduct.length ? "flexColCenter 775:flexRowCenter   " : " hidden"}  w-full h-auto 
